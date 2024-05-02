@@ -23,7 +23,8 @@ public class MaConfiguration {
                 .password(bcrypt.encode("987")).roles("USER", "ADMIN").build());
         return manager;
     }
-    @Bean public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    @Bean 
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         //http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
 
         http.authorizeHttpRequests(request -> request
